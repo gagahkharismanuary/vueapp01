@@ -1,0 +1,334 @@
+.description-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+.description-absolute__center-vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media #{$mobile}{
+    width: 90%;
+  }
+}
+
+.description-container__img {
+  height: 494px;
+  position: relative;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/image-BG-Section.png");
+
+  @media #{$mobile}{
+    height: 520px;
+  }
+}
+
+.description-col__just-right {
+  width: 50%;
+  margin-left: 50%;
+  font-weight: normal;
+
+  h2 {
+    font-size: 34px;
+    line-height: 46px;
+    margin: 0;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  @media #{$mobile}{
+    width: 100%;
+    margin-left: 0%;
+    text-align: left;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+  }
+}
+
+.description-type__text-only {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
+
+  a {
+    margin-top: 2em;
+  }
+
+  @media #{$mobile}{
+    width: 90% !important;
+
+    a {
+      width: 100%;
+    }
+  }
+}
+
+
+// column grid description
+
+.description-60 {
+  display: inline-block;
+  width: calc(60% - 3%);
+  margin-left: 3%;
+  vertical-align: middle;
+
+  @media #{$mobile}{
+    display: block;
+    width: 100%;
+    padding: 3%;
+    margin-left: 0%;
+    text-align: center;
+    margin-bottom: 2em;
+    h2,
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.description-40 {
+  display: inline-block;
+  width: calc(40% - 3%);
+  margin-left: 3%;
+  vertical-align: middle;
+
+  @media #{$mobile}{
+    display: block;
+    width: 100%;
+    padding: 3%;
+    margin-left: 0%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}
+
+.description-50 {
+  display: inline-block;
+  width: calc(50% - 3%);
+  margin-left: 3%;
+  vertical-align: middle;
+
+  @media #{$mobile}{
+    display: block;
+    width: 100%;
+    padding: 3%;
+    margin-left: 0%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}
+
+
+
+// column container
+.description-col__text {
+  h2,
+  p {
+    width: 90%;
+    margin: 0;
+  }
+
+  h2  {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    margin-top: 3em;
+  }
+
+  @media #{$mobile}{
+    h2,
+    p {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}
+
+.description-col__center {
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 2em;
+  max-width: 619px;
+}
+
+.descriptions-text--padding-top {
+  padding-top: 83px;
+}
+
+.descriptions-text--padding-tb {
+  padding-top: 83px;
+  padding-bottom: 83px;
+}
+
+.col-card-description {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.desc-wardah{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  margin-top: 3em;
+  @media #{$max-wide} {
+    padding-bottom: 30px;
+  }
+  @media #{$mobile} {
+    flex-wrap: wrap;
+    padding: 0 .75em;
+    margin-top: 2em;
+  }
+  .desc-wardah__item{
+    flex: 1;
+    .desc-wardah__item-img-top{
+      @media #{$mobile} {
+        margin-top: 1em;
+        margin-bottom: .5em;
+      }
+    }
+    .desc-wardah__item-img-below{
+      // padding-bottom: 2.5em;
+      padding: 1em 3em 3.5em 3em;
+      > img{
+        max-height: 205px;
+        @media #{$max-wide} {
+          max-height: 190px;
+        }
+        @media #{$mobile} {
+          max-height: 135px;
+        }
+      }
+      @media #{$mobile} {
+        text-align: center;
+        padding-bottom: 1.5em; 
+      }
+    }
+    &:last-of-type{
+      flex: 1.55;
+      position: relative;
+      left: 32px;
+      @media #{$max-wide} {
+        left: 20px;
+      }
+      @media #{$max-large} {
+        flex: 2;
+      } 
+    }
+    @media #{$mobile} {
+      flex: auto;
+      &:last-of-type{
+        position: static;
+        left: 0;
+        flex: auto;
+        text-align: center;
+        >img{
+          max-height: 250px;
+        }
+      }
+    }
+  }
+}
+
+.desc-wardah--img-back{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.description__img-text {
+
+  > .container {
+    display: flex;
+  }
+
+  &__img {
+    flex: 1 0 50%;
+
+    > img {
+      height: 354px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 3em;
+    padding-right: 1em;
+    flex: 1 0 50%;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 34px;
+      color: white;
+      font-weight: bold;
+      line-height: 46px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+
+  @media #{$mobile}{
+    > .container {
+      flex-direction: column;
+      padding-left: .5em;
+      padding-right: .5em;
+      
+    }
+
+    &__img {
+      text-align: center;
+      > img {
+        height: auto;
+        max-height: 205px;
+      }
+    }
+
+    &__text {
+      margin-left: 0;
+      margin-top: 1.5em;
+      padding-left: 0;
+      padding-right: 0;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

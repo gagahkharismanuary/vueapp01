@@ -1,0 +1,45 @@
+.campaign-wardah{
+    .campaign-wardah__subtitle{
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0.5em auto 58px auto;
+        @media #{$mobile} {
+            font-size: 14px;
+        }
+    }
+
+    .campaign-wardah__container{
+        position: relative;
+        margin-top: 1.5em;
+    }
+    .campaign-wardah__img-left{
+        display: inline-block;
+        position: relative;
+        left: -102px;
+        @media #{$max-large} {
+            max-height: 250px;
+        }
+        @media #{$mobile} {
+            max-height: 200px;
+        }
+    }
+    .campaign-wardah__img-right{
+        float: right;
+        > img{
+            max-height: 301px;
+            @media #{$max-large} {
+                max-height: 250px;
+            }
+            @media #{$mobile} {
+                max-height: 200px;
+            }
+        }
+    }
+    .campaign-wardah__card,
+    .skeleton--gray{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+}

@@ -1,0 +1,12 @@
+//Browser Prefix
+@mixin vendor-prefix($property, $expression){
+	-webkit-#{$property} : #{$expression};
+	-moz-#{$property} : #{$expression};
+	#{$property} : #{$expression};
+}
+
+@mixin calc($property, $expression){
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}

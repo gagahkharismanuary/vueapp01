@@ -1,0 +1,48 @@
+.how-to{
+    display: flex;
+    @media #{$mobile} {
+        flex-wrap: wrap; 
+    }
+    .how-to__item{
+        flex: 1;
+        padding: 2em 2em 0;
+        
+        p {
+            font-size: 16px;
+        }
+        
+        @media #{$mobile} {
+            flex-basis: 100%;
+            padding: 0 .75em;
+            
+            + .how-to__item{
+                margin-top: 1.5em;
+            }
+        }
+    }
+}
+
+.how-to__btn{
+    margin-top: 2em;
+    margin-bottom: 3em;
+    @media #{$mobile} {
+        padding: 0 .75em;
+        margin-bottom: 2em;
+        >.btn{
+            padding-left: initial;
+            padding-right: initial;
+            width: 100%;
+        }
+    }
+}
+
+.how-to__head {
+    font-weight: bold;
+    font-size: 34px;
+
+    &-sub {
+        display: block;
+        font-size: 18px;
+        font-weight: normal;
+    }
+}

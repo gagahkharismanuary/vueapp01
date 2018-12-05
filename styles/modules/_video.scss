@@ -1,0 +1,128 @@
+.video-section{
+    display: flex;
+    // padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+
+    @media #{$mobile} {
+        flex-wrap: wrap;
+    }
+    .video-section__item{
+        flex: 1;
+        color: #36919C;
+        padding: 3em;
+        &:last-child{
+            position: relative;
+            &::before{
+                position: absolute;
+                right: -12px;
+                top: 0;
+                content: url('/assets/images/image__triangle.png');
+            }
+        }
+
+        @media #{$max-large} {
+            padding: 1.5em;
+        }
+        @media #{$mobile} {
+            flex-basis: 100%;
+            padding: .75em;
+            &:last-child{
+                &::before{
+                    right: -7px;
+                    top: -25px;
+                }
+            }
+        }   
+    }
+    .video-section__head{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0;
+        @media #{$mobile} {
+            font-size: 18px;
+        }
+    }
+    .video-section__text{
+        font-size: 16px;
+        @media #{$mobile} {
+            font-size: 14px;
+        }
+    }
+}
+
+// .video-section-hr{
+//     margin-bottom: 4em;
+// }
+
+.video-section-sub-content{
+    @media #{$mobile} {
+        padding: 0 .75em;
+    }
+    > .video-section-sub-content__text{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        @media #{$mobile} {
+            font-size: 20px;
+            text-align: left;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            > span{
+                display: block;
+                padding-left: 1em;
+            }
+        }
+        @media screen and (max-width: 320px){
+            font-size: 18px;
+        }
+    }
+    > hr{
+        &:last-of-type{
+            margin-bottom: 4em;
+        }
+    }
+}
+
+.video-section--gramedia {
+    padding-bottom: 3em;
+    
+    .video-section__head {
+        font-size: 34px;
+        font-weight: bold;
+        color: #FFD058;
+    }
+    .video-section__item {
+        color: white;
+
+        &:first-of-type{
+            padding-left: 0;
+            padding-right: 6em;
+        }
+
+        span {
+            color: #FFD058;
+        }
+    }
+
+    .video-section__text {
+        font-size: 18px;
+    }
+
+    @media #{$mobile}{
+        padding-bottom: 5em;
+        .video-section__head {
+            font-size: 28px;
+        }
+        .video-section__item {
+            &:first-of-type{
+                padding: .75em;
+            }
+        }
+        .video-section__text {
+            font-size: 16px;
+        }
+    }
+}
+

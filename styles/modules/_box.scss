@@ -1,0 +1,159 @@
+.box {
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	background: $black20;
+}
+
+.box--shadow {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.box--400{
+	width: 400px;
+	margin: 0 auto;
+}
+.box--big {
+	padding: 40px;
+	font-size: 20px;
+}
+
+.box--full {
+	padding: 0;
+}
+
+.box--blue, .box--primary {
+	background: $brand;
+	color: white;
+}
+
+.box--yellow {
+	background: lighten($yellow, 25%);
+}
+
+.box--soft-yellow{
+	background: $soft-yellow;
+}
+
+.box--yellow-pastel{
+	background: $yellow-pastel;
+}
+
+.box--white {
+	background: white;
+}
+
+.box--pink {
+	background: $pink;
+	color: white;
+}
+
+.box--red-pastel {
+	background: $red-pastel;
+}
+
+.box--danger {
+	background: $red;
+	color: white;
+}
+
+.box--warning {
+	background: $warning;
+}
+
+.box--info {
+	background: $info;
+	color: white;
+}
+
+.box--black {
+	background: $black80;
+	color: white;
+}
+
+.box--success {
+	background: $success;
+	color: white;
+}
+
+.box--green {
+	background: $green;
+	color: white;
+}
+
+.box--round {
+	border-radius: 10px;
+}
+
+.box--border {
+	border-bottom: 8px solid $black50;
+}
+
+.box--border-pink {
+	border-bottom: 8px solid $pink;
+}
+
+.box--border {
+	border: 1px solid $black30;
+}
+
+.box--bordered{
+	border: 1px solid $black30;
+	border-radius: 3px;
+}
+
+.box--border-top-bottom{
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #ccc;
+}
+
+.box--agree {
+	padding: 20px;
+}
+
+.campaign-live-box {
+	margin-top: 40px;
+}
+
+.box--black10 {
+	background: $black10;
+}
+
+.box--black20 {
+	background: $black20;
+}
+
+.box--black30 {
+	background: $black30;
+}
+
+.box--black40 {
+	background: $black40;
+	color: white;
+}
+
+.box--black50 {
+	background: $black50;
+	color: white;
+}
+
+.box--black60 {
+	background: $black60;
+	color: white;
+}
+
+.box--black70 {
+	background: $black70;
+	color: white;
+}
+
+.box--black80 {
+	background: $black80;
+	color: white;
+}
+
+.box--black90 {
+	background: $black90;
+	color: white
+}

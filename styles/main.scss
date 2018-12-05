@@ -1,0 +1,162 @@
+
+
+$custom-font        : 'Open Sans', sans-serif;
+
+
+
+
+@import "utilities/normalize";
+@import "utilities/variables";
+@import "utilities/resets";
+@import "utilities/helpers";
+@import "utilities/prefixer";
+@import "utilities/print";
+@import "mixins/main";
+@import "modules/modules";
+@import "pages/home";
+// @import "layouts/layouts";
+
+$primary-color : #333;
+
+$black: #000;
+
+
+body {
+  h1 {
+    color : #fff;
+    font-family: $custom-font;
+}
+}
+
+// 2 Basic styles
+// ------------------------------------------------------------------------ //
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 400 $base_font_size $custom-font;
+    line-height: $base_line_height;
+    // text-rendering: optimizeLegibility !important;
+    // -webkit-font-smoothing: antialiased !important;
+    // -moz-osx-font-smoothing: grayscale;
+    // text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body {
+    color: $black70;
+    background: $body-bg;
+    top: 0 !important;
+
+    &.active {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    transition: $animate;
+
+    &:hover,
+    &:focus {
+        color: $link_hover;
+    }
+}
+
+label,
+input,
+button,
+select,
+textarea {
+    // font-family: $base_font_family;
+}
+
+
+.container {
+    width: 94%;
+    max-width: 1020px;
+    margin: 0 auto;
+
+    @media #{$medium} {
+        //max-width: 680px;
+    }
+    @media #{$large} {
+        //max-width: 860px;
+    }
+
+    &--small {
+        max-width: 420px;
+    }
+
+    &--medium {
+        max-width: 600px;
+    }
+
+    &--large {
+        max-width: 840px;
+    }
+}
+
+%container {
+    width: 94%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+// section
+section{
+    // padding: 20px 0;
+    padding: 2em 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $black30;
+
+    &:first-child{
+    	border: 0px;
+    }
+
+    &.no-border-bottom{
+        border-bottom: 0;
+    }
+}
+.section-title{
+    font-size: 34px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 3rem;
+
+    &--left{
+        text-align: left;
+
+        @media #{$mobile} {
+            text-align: center;
+        }
+    }
+
+    @media #{$mobile} {
+        font-size: 28px;
+        margin-top: 2rem;
+    }
+}
+
+// end section
+
+.content-line{
+    width: 10.66%;
+    height: 5px;
+    background-color: $pink;
+    margin-bottom: 28px;
+
+    @media #{$mobile} {
+      margin: 0 auto 2em;
+  }
+}
+
+#app {
+    width: 480px;
+    margin: 0 auto;
+}

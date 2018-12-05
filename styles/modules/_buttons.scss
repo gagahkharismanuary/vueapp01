@@ -1,0 +1,257 @@
+
+// Setup
+// ------------------------------------------------------------------------ //
+
+$BTN_PADDING: $space/3 $space;
+
+@mixin btnStyle( $bg, $color: #fff ) {
+    color: $color;
+    background: $bg;
+
+    &:hover,
+    &:focus {
+        background: darken($bg,20%);
+    }
+}
+
+
+// Base Style
+// ------------------------------------------------------------------------ //
+
+.btn,
+.btn--alt
+{
+    //@include btnStyle($bg);
+
+    display: inline-block;
+    padding: $BTN_PADDING;
+    border: 0;
+    font-family: $custom-font;
+    font-weight: 700;
+    // line-height: $base_line_height;
+    line-height: normal;
+    text-align: center;
+    //white-space: nowrap;
+    vertical-align: middle;
+    color: $black80;
+    background: #ddd;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    transition: $animate;
+    // box-shadow: inset 0 -15px 30px rgba($black,0.1);
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:focus {
+        outline: none;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    .img-icon {
+        max-height: 18px;
+        vertical-align: top;
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .btn-text, .btn-icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .fa {
+        font-size: 18px;
+        margin-right: 7px;
+    }
+}
+
+// Modifier
+// ------------------------------------------------------------------------ //
+
+.btn--block {
+    width: 100%;
+}
+
+.btn-s--block {
+    width: 100%;
+    display: block;
+    margin-bottom: $space;
+
+    @media #{$medium} {
+        width: auto;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+.btn--large {
+    padding: ($space/2) $space*1.5;
+}
+
+.btn--wide{
+    padding: $space/3 $space*1.75
+}
+
+.btn--wide-large {
+   padding: $space/3 $space*2.75
+}
+
+.btn--bold {
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+
+.btn--blue {
+    background: $brand;
+    color: #FFF;
+    //text-shadow: 0 1px 2px darken($brand,30%);
+
+    &:hover {
+        background: darken($brand,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($brand,30%);
+    }
+}
+
+.btn--blue-wardah {
+    background: $blue-wardah;
+    color: #FFF;
+    //text-shadow: 0 1px 2px darken($blue-wardah,30%);
+
+    &:hover {
+        background: darken($blue-wardah,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($blue-wardah,30%);
+    }
+}
+
+
+.btn--pink {
+    background: $pink;
+    color: #FFF;
+
+    &:hover {
+        background: darken($pink,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($pink,30%);
+    }
+}
+
+.btn--purple {
+    background-color: $purple;
+    color: #FFF;
+
+    &:hover {
+        background: darken($purple,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($purple,30%);
+    }
+}
+
+.btn--grey {
+    background: $black60;
+    color: #FFF;
+
+    &:hover {
+        background: darken($black60,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($black60,30%);
+    }
+}
+
+.btn--cancelgray{
+    background: $cancel-gray;
+    color: $FFF;
+
+    &:hover{
+        background: darken($cancel-gray,10%);
+        color: $FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($cancel-gray,30%);
+    }
+}
+
+.btn--green {
+    background: $green;
+    color: #FFF;
+    //text-shadow: 0 1px 2px darken($green,10%);
+
+    &:hover {
+        background: darken($green,10%);
+        color: #FFF;
+    }
+
+    &:focus, &:active {
+        background: darken($green,30%);
+    }
+}
+
+.btn--plain {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $link;
+
+    &:hover {
+        color: $link_hover;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn-text, .btn-icon {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+.btn--disabled {
+    background: $black30;
+    pointer-events: none;
+    cursor: default;
+}
+
+
+.btn--zakat {
+    background: $zakat-green;
+    color: white;
+
+    &:hover {
+        background: darken($zakat-green,10%);
+        color: #FFF;
+    }
+}
+
+.btn--mtrl{
+    border-radius: 3px;
+    // font-weight: 100;
+
+    &.btn--large{
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+}

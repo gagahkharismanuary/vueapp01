@@ -1,0 +1,438 @@
+
+// Config
+// --------------------------------------------------------------------------- */
+
+$BZ_GRID_COUNT  : 12;
+$BZ_GRID_GUTTER : 25px;
+$BZ_GRID_MEDIUM : 40 * 1em;
+$BZ_GRID_LARGE  : 64 * 1em;
+
+@function bz_grid_size($size) {
+    @return $size / $BZ_GRID_COUNT * 100%;
+}
+
+
+// Style
+// --------------------------------------------------------------------------- */
+
+%bz_clearfix:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.grid {
+    @extend %bz_clearfix;
+
+    margin-left: $BZ_GRID_GUTTER * -1;
+    box-sizing: border-box;
+}
+
+.grid--no-gutter {
+    margin-left: 0;
+
+    > .grid__col {
+        padding-left: 0;
+    }
+
+}
+
+.grid__col {
+    float: left;
+    width: 100%;
+    min-height: 1px;    // http://css-tricks.com/make-sure-columns-dont-collapse-horizontally/
+    padding-left: $BZ_GRID_GUTTER;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through $BZ_GRID_COUNT {
+
+    .grid__col--s#{$i} {
+        width: bz_grid_size($i);
+    }
+
+    .grid__col--off-s#{$i} {
+        margin-left: bz_grid_size($i);
+    }
+
+}
+
+@media screen and (min-width: #{$BZ_GRID_MEDIUM}) {
+
+    [class*="grid__col--m"] {
+        margin-left: 0;
+    }
+
+    @for $i from 1 through $BZ_GRID_COUNT {
+        .grid__col--m#{$i} {
+            width: bz_grid_size($i);
+        }
+
+        .grid__col--off-m#{$i} {
+            margin-left: bz_grid_size($i);
+        }
+    }
+
+}
+
+@media screen and (min-width: #{$BZ_GRID_LARGE}) {
+
+    [class*="grid__col--l"] {
+        margin-left: 0;
+    }
+
+    @for $i from 1 through $BZ_GRID_COUNT {
+        .grid__col--l#{$i} {
+            width: bz_grid_size($i);
+        }
+
+        .grid__col--off-l#{$i} {
+            margin-left: bz_grid_size($i);
+        }
+    }
+
+}
+
+.block-row {
+    margin-bottom: $space;
+}
+
+$col-margin     : 3%;
+
+.col {
+    @extend .clearfix;
+
+    @media #{$medium} {
+        margin-left: $col-margin * -1;
+    }
+}
+
+.col-s {
+    margin-left: $col-margin * -1;
+}
+
+%col {
+    @extend %clearfix;
+
+    @media #{$medium} {
+        margin-left: $col-margin * -1;
+    }
+}
+
+[class^="col--"], [class*=" col--"] {
+    margin-bottom: $space;
+
+    @media #{$medium} {
+        float: left;
+        margin-bottom: 0;
+        margin-left: $col-margin;
+    }
+}
+
+[class^="col--s"], [class*=" col--s"] {
+    float: left;
+    margin-bottom: 0;
+    margin-left: $col-margin;
+}
+
+//Grid for mobile device
+.col--s2 {
+    width: (100% * 2 / 12) - 3;
+}
+
+.col--s3 {
+    width: (100% * 3 / 12) - 3;
+}
+
+.col--s4 {
+    width: (100% * 4 / 12) - 3;
+}
+
+.col--s5 {
+    width: (100% * 5 / 12) - 3;
+}
+
+.col--s6 {
+    width: (100% * 6 / 12) - 3;
+}
+
+.col--s7 {
+    width: (100% * 7 / 12) - 3;
+}
+
+.col--s8 {
+    width: (100% * 8 / 12) - 3;
+}
+
+.col--s9 {
+    width: (100% * 9 / 12) - 3;
+}
+
+.col--s10 {
+    width: (100% * 10 / 12) - 3;
+}
+
+.col--s11 {
+    width: (100% * 11 / 12) - 3;
+}
+
+.col--s12 {
+    width: (100%) - 3;
+}
+
+// Grid for tablet device and up
+.col--m1 {
+    @media #{$medium} {
+        width: (100% * 1 / 12) - 3;
+    }
+}
+
+.col--m2 {
+    @media #{$medium} {
+        width: (100% * 2 / 12) - 3;
+    }
+}
+
+.col--m3 {
+    @media #{$medium} {
+        width: (100% * 3 / 12) - 3;
+    }
+}
+
+.col--m4 {
+    @media #{$medium} {
+        width: (100% * 4 / 12) - 3;
+    }
+}
+
+.col--m5 {
+    @media #{$medium} {
+        width: (100% * 5 / 12) - 3;
+    }
+}
+
+.col--m6 {
+    @media #{$medium} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.col--m7 {
+    @media #{$medium} {
+        width: (100% * 7 / 12) - 3;
+    }
+}
+
+.col--m8 {
+    @media #{$medium} {
+        width: (100% * 8 / 12) - 3;
+    }
+}
+
+.col--m9 {
+    @media #{$medium} {
+        width: (100% * 9 / 12) - 3;
+    }
+}
+
+.col--m10 {
+    @media #{$medium} {
+        width: (100% * 10 / 12) - 3;
+    }
+}
+
+.col--m11 {
+    @media #{$medium} {
+        width: (100% * 11 / 12) - 3;
+    }
+}
+
+.col--l2 {
+    @media #{$large} {
+        width: (100% * 2 / 12) - 3;
+    }
+}
+
+
+//Grid for netbook and up
+.col--l3 {
+    @media #{$large} {
+        width: (100% * 3 / 12) - 3;
+    }
+}
+
+.col--l4 {
+    @media #{$large} {
+        width: (100% * 4 / 12) - 3;
+    }
+}
+
+.col--l5 {
+    @media #{$large} {
+        width: (100% * 5 / 12) - 3;
+    }
+}
+
+.col--l6 {
+    @media #{$large} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.col--l7 {
+    @media #{$large} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.col--l8 {
+    @media #{$large} {
+        width: (100% * 8 / 12) - 3;
+    }
+}
+
+.col--l9 {
+    @media #{$large} {
+        width: (100% * 9 / 12) - 3;
+    }
+}
+
+.col--l10 {
+    @media #{$large} {
+        width: (100% * 10 / 12) - 3;
+    }
+}
+
+//Grid for notebook and up
+.col--xl1 {
+    @media #{$wide} {
+        width: (100% * 1 / 12) - 3;
+    }
+}
+
+.col--xl2 {
+    @media #{$wide} {
+        width: (100% * 2 / 12) - 3;
+    }
+}
+
+.col--xl3 {
+    @media #{$wide} {
+        width: (100% * 3 / 12) - 3;
+    }
+}
+
+.col--xl4 {
+    @media #{$wide} {
+        width: (100% * 4 / 12) - 3;
+    }
+}
+
+.col--xl5 {
+    @media #{$wide} {
+        width: (100% * 5 / 12) - 3;
+    }
+}
+
+.col--xl6 {
+    @media #{$wide} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.col--xl7 {
+    @media #{$wide} {
+        width: (100% * 7 / 12) - 3;
+    }
+}
+
+.col--xl8 {
+    @media #{$wide} {
+        width: (100% * 8 / 12) - 3;
+    }
+}
+
+.col--xl9 {
+    @media #{$wide} {
+        width: (100% * 9 / 12) - 3;
+    }
+}
+
+.col--xl10 {
+    @media #{$wide} {
+        width: (100% * 10 / 12) - 3;
+    }
+}
+
+.col--xl11 {
+    @media #{$wide} {
+        width: (100% * 11 / 12) - 3;
+    }
+}
+
+.col--sm5 {
+    @media #{$smallmedium} {
+        width: (100% * 5 / 12) - 3;
+    }
+}
+
+.col--sm6 {
+    width: 100%;
+
+    @media #{$smallmedium} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.col--sm7 {
+    @media #{$smallmedium} {
+        width: (100% * 6 / 12) - 3;
+    }
+}
+
+.float-left {float: left;}
+.float-right {float: right;}
+.float-m-right {
+    @media #{$medium} {
+        float: right;
+    }
+}
+
+.col--no-gutter {
+    width: 100%;
+
+    .col--m4 {
+        margin-left: 0;
+        // margin-left: 4px;
+    }
+}
+
+.col--full [class^="col--"], .col--full [class*=" col--"] {
+    margin-left: 0;
+    margin-right: 3%;
+
+    @media #{$medium} {
+        margin-left: 0;
+    }
+}
+
+.col--full {
+    width: 100%;
+    margin-left: 0;
+
+    .col--s7 {
+        width: 58.33333%;
+    }
+
+    .col--s5 {
+        margin-right: 0;
+    }
+
+    .col--s6 {
+        width: 48%;
+    }
+
+    .col--s6:last-child {
+        margin-right: 0;
+    }
+}

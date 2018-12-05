@@ -1,0 +1,53 @@
+.tag {
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+.tag--info {
+	background: $brand;
+	color: white;
+	font-size: 12px;
+}
+
+.tag--white-blue{
+	background: white;
+	color: $brand;
+	font-size: 12px;
+}
+
+.tag--success{
+	background: $green;
+	color: white;
+	font-size: 12px;
+}
+
+.tag--danger {
+	background: $danger;
+	color: white;
+	font-size: 12px;
+}
+
+.tag--pink {
+	background: $pink;
+	color: white;
+	font-size: 12px;
+}
+
+.tag--gray {
+	background: $black30;
+	color: white;
+	font-size: 12px;
+}
+
+.tag--capsule {
+	border-radius: 100px;
+}
+
+.tag--circle{
+	border-radius: 100%;
+}
+
+.tag--white {
+	background: white;
+	color: $dark-blue;
+}

@@ -1,0 +1,19 @@
+.home-project-slide {
+
+	.project-list__item {
+
+			margin: 10px 10px;
+
+		@media #{$large} {
+			margin: 10px 40px;
+		}
+
+		.box {
+			min-height: 500px;
+
+			@media #{$large} {
+				height: 500px;
+			}
+		}
+	}
+}

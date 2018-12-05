@@ -1,0 +1,9 @@
+.desc-left-right{
+    > .desc__item{
+        > [class*="desc__item-"]:last-child{
+            @media #{$mobile} {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

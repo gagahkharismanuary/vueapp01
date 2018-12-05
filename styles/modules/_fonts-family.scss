@@ -1,0 +1,9 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+$custom-font        : 'Open Sans', sans-serif;
+
+.custom-font, %custom-font {
+    font-family: $custom-font;
+}

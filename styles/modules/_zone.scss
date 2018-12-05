@@ -1,0 +1,58 @@
+.zone-navy {
+	padding: 20px;
+	display: block;
+	width: 100%;
+	color: white;
+	background: $dark-blue;
+
+	a {
+		color: white;
+	}
+
+	a:hover {
+		color: $black80;
+	}
+}
+
+.zone-white{
+    background: $FFF;
+    // border-width: 1px 0;
+    border-style: solid;
+    // border-color: $black30;
+
+    &:first-child{
+        border: 0;
+    }
+
+    &.no-padding{
+        padding: 0;
+    }
+}
+
+.zone-gray {
+	background: #FAFAFA;
+}
+
+.zone-blue {
+	background-color: #D4EBFF;
+}
+
+.zone-blue-light {
+	background-color: #5CCAEB;
+}
+
+.zone--blue-lead{
+	background-color: $blue--lead;
+}
+
+.zone-yellow {
+	background-color: #FAD94B;
+}
+
+.zone-dark-yellow {
+	background-color: #FFB656;
+}
+
+.zone-pink {
+	background-color: #E96465;
+}

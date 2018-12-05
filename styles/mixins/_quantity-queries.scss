@@ -1,0 +1,11 @@
+@mixin quantity-query( $number, $comparison: 'equal' ) {
+	@if index( ('greater' 'more' '>'), $comparison ) {
+		$nth: 'n + #{$number}';
+	} @else if index( ('less' 'fewer' '<'), $comparison ) {
+		$nth: '-n + #{$number}';
+	} @else if index( ('equal' 'same' '='), $comparison ) {
+		$nth: $number;
+	} @else {
+		@warn "Sorry, that’s an invalid $comparison value."
+	}
+}

@@ -1,0 +1,22 @@
+/*
+  mixin untuk melakukan text responsive pada variable yang diinginkan
+  dengan mengunakn breakpoint pada setiap hasil yang dikeluarkan
+  font-size: 14px, pada min-width: 48em
+*/
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    //jika breakpoints adalah null lakukan breakpoints tersebut
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      // Jika breakpointsnya ketemu gunakan value tersebut
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

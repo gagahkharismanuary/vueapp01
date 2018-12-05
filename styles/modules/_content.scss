@@ -1,0 +1,21 @@
+.centered-inline-content{
+    vertical-align: middle;
+    display: inline-block;
+    float: none;
+
+    @media #{$mobile} {
+		display: block;
+    }
+}
+
+.full-mobile-content{
+
+	@media #{$mobile} {
+		width: calc(100% + 6%);
+		margin-left: -3%;
+	}
+
+    > * {
+        width: 100%
+    }
+}

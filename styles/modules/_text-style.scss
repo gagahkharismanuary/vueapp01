@@ -1,0 +1,157 @@
+//text color
+.text-green, .text-success {
+    color: $green;
+}
+
+.text-tosca {
+	color: $tosca;
+}
+
+.text-danger {
+	color: $red;
+}
+
+.text-darkgreen {
+    color: $dark-green;
+}
+
+.text-pink {
+    color: $pink;
+}
+
+.text-blue, .text--blue {
+    color: $brand;
+}
+
+.text-blue-wardah {
+    color: $blue-wardah;
+}
+
+
+.text-navy {
+    color: $navy;
+}
+
+.text--darkBlue{
+    color: $info
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-black20 {
+    color: $black20;
+}
+
+.text-black30 {
+    color: $black30;
+}
+
+.text-black40 {
+    color: $black40;
+}
+
+.text-black60 {
+    color: $black60;
+}
+
+.text-black65 {
+    color: $black65;
+}
+
+.text-black70 {
+    color: $black70;
+}
+
+.text-black80 {
+    color: $black80;
+}
+
+// text font weight
+
+.text-slim {
+    font-weight: 400;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-black-default {
+    color: $default-text;
+}
+
+.text-normal {
+   font-weight: normal;
+}
+
+//text color end
+
+/*
+  Class for font size, output is
+  .text-{number} {
+    font-size: {number}
+  }
+}
+*/
+
+@for $font-size from 10 through 52 {
+  .text-#{$font-size}{
+    font-size: 0px + $font-size;
+  }
+}
+//text size end
+
+
+//align
+.align-center {
+    text-align: center;
+
+    &--mobile{
+        text-align: left;
+
+        @media #{$mobile} {
+            text-align: center;
+        }
+    }
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+
+.text-responsive-description {
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+
+  @media #{$max-large}{
+    font-size: 20px;
+  }
+  @media #{$mobile}{
+    text-align: center;
+  }
+}
+
+// description modules
+.text-description-title {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  max-width: 540px;
+  font-size: 34px;
+
+  &--super-margin-bottom {
+    margin-bottom: 83px;
+  }
+}

@@ -1,0 +1,23 @@
+.counter{
+    display: inline-block;
+    > li{
+        font-weight: 600;
+        font-size: 100px;
+        background-color: #FFFFFF;
+        display: inline-block;
+        border-radius: 5px;
+        margin: 0 5px;
+        /* padding: 20px 40px; */
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        line-height: 120px;
+
+        @media #{$mobile} {
+            font-size: 53px;
+            width: 55px;
+            height: 75px;
+            line-height: 75px;
+        }
+    }
+}

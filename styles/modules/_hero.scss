@@ -1,0 +1,47 @@
+.hero-container--lead {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('/assets/images/image__banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+
+    &-text {
+        max-width: 480px;
+    }
+
+    &-text-head {
+        font-size: 48px;
+        margin: 0 auto 0.75rem auto;
+    }
+
+    &-text-sub {
+        font-size: 18px;
+        margin: 0;
+        // margin: 0 auto 1.7em auto;
+    }
+
+    @media #{$mobile} {
+        height: 480px;
+        background-position: -310px;
+        .container {
+            width: 100%;
+        }
+
+        &-text {
+            text-align: center;
+            width: 94%;
+            padding: 0 0.5rem;
+            margin: 0 auto;
+        }
+        &-text-head {
+            font-size: 34px;
+        }
+        &-text-sub {
+            font-size: 16px;
+        }
+    }
+
+}

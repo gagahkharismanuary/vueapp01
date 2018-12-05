@@ -1,0 +1,112 @@
+.footer{
+	padding: 3em 0;
+    .footer__top-content{
+        position: relative;
+        margin: 0 0 4em 0;
+        @media #{$mobile} {
+            margin: 1em 0 2em 0;
+            text-align: center;
+        }
+    }
+}
+.footer--white{
+    background-color: $FFF;
+}
+.footer__logo{
+    margin-left: 1em;
+    @media #{$mobile} {
+        margin-left: 0;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    > .footer__logo-item {
+        position: relative;
+        display: inline-block;
+        &:not(:last-child){
+            padding-right: 3rem;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 5px;
+                bottom: 5px;
+                right: 1.5rem;
+                width: 1px;
+                // border-right: 1px solid $brand;
+                background-color: $black25; 
+            }
+        }
+
+        @media #{$mobile} {
+            display: block;
+
+            &:not(:last-child){
+                padding-right: 0;
+                padding-bottom: 2rem;
+                &::after{
+                    content: none;
+                }
+            }
+        }
+    }
+}
+.footer__social{
+    margin-left: 4em;
+
+    > li{
+        display: inline-block;
+        margin-right: 2em;
+        font-size: 18px;
+
+        .fa-facebook{
+            color: $facebook-color;
+        }
+        .fa-twitter{
+            color: $twitter-color;
+        }
+        .fa-google-plus{
+            color: $google-color;
+        }
+        .fa-instagram{
+            color: $instagr-color;
+        }
+        .fa-youtube-play{
+            color: $youtube-color;
+        }
+    }
+
+    @media #{$mobile} {
+        margin: 2.5em auto;
+        text-align: center;
+        >li {
+            margin: 0 1em;
+        }
+    }
+}
+.footer__powered{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @media #{$mobile} {
+        position: static;
+        text-align: center;
+        transform: translate(0,0);
+        margin-top: 2em;
+    }
+
+    >img{
+        max-height: 24px;
+    }
+    > .footer__powered__text{
+        margin: 0 1em;
+        font-size: 12px;
+    }
+}
+
+.footer-wardah{
+    background-color: #4EB4C0;
+    padding-top: 15px;
+}

@@ -1,0 +1,179 @@
+
+// Typography
+// ------------------------------------------------------------------------ //
+
+$base_font_size     : 0.9375rem;
+$base_line_height   : 1.5;
+$base_font_family   : 'Helvetica Nue', Helvetica, Arial, sans-serif;
+$space              : $base_line_height * 1em;
+
+//$custom-font 		: 'Open Sans', 'Arial' sans-serif;
+// $custom-font 		: 'Lucida Sans', Lucida Grande', 'Lucida Sans Unicode', 'Open Sans', sans-serif;
+// $custom-font 		: $ss-pro, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+
+
+// Colors
+// ------------------------------------------------------------------------ //
+$brand          : #00aeef;
+$brand_lite 		: lighten($brand,40%);
+$dark-blue			: #077FAB;
+$aqua           : #0053A6;
+$blue--lead     : #0164A6;
+
+$black-blue			: #1B1D1F;
+$blue-blacken		: #212A33;
+
+$black              : #000;
+$black90            : lighten($black, 10%); //#1a1a1a
+$black80            : lighten($black, 20%);	//#333333
+$black70            : lighten($black, 30%); //#4d4d4d
+$black65            : lighten($black, 35%); //595959
+$black60            : lighten($black, 40%); //#666666
+$black50            : lighten($black, 50%); //#808080
+$black40            : lighten($black, 60%); //#999999
+$black30            : lighten($black-blue, 70%); //#ccd0d3
+$black25            : lighten($black-blue, 75%); //#dadcdf
+$black20            : lighten($black-blue, 80%); //#e7e9eb
+$black10            : lighten($black-blue, 87.5%); //#fcfcfc
+
+$default-text		: #5d5d5d;
+$default-brand-text: #0164A6;
+
+$body-bg : lighten($black20,4%);
+
+$FFF				: #FFFFFF;
+
+$text_color 		: $black70;
+
+$site_bg 			: lighten($brand,51%);
+$link               : $brand;
+$link_hover         : darken($link, 20%);
+$red 				: #cb3f3f;
+$red-error			: #eb4555;
+$red-pastel			: #fde3e6;
+
+$pink 				: #da336b;
+
+$green 				: #6bd34a;
+$medium-green		: #49be47;
+$dark-green			: #009245;
+$zakat-green		: #6ad248;
+
+$tosca				: #28E799;
+
+// $orange				: #F58634;
+$orange				: #f47737;
+
+$navy				: #077FAB;
+$purple :  #650E81;
+$blue-hover			: #1a95c8;
+$blue-table			: #eff3f6;
+$soft_blue			: #00afef;
+$blue-card			: #EDF8FC;
+$blue-wardah    : #36919C;
+$blue-wardah-2    : #E3F4F3;
+
+$light-yellow		: #FBFBC1;
+$outline-yellow		: #DBD1A5;
+$yellow 			: #FF3;
+$soft-yellow		: #fbf1a8;
+$yellow-pastel		: #fffae7;
+
+$tan_lite 			: #ededea;
+
+$light-gray			: #fafafa;
+$verylight-gray		: #fbfdfe;
+$medium-gray		: #E5DEDE;
+$cancel-gray		: #cdcdcd;
+$gray-card			: #F6F6F6;
+
+$facebook-color     : #405A93;
+$twitter-color      : #44ccf6;
+$youtube-color      : #E52D27;
+$google-color       : #cd201f;
+$tumblr-color       : #2c4762;
+$yahoo-color        : #6E329D;
+$instagr-color      : #3F729B;
+$whatsapp-color     : #00e676;
+$lineapp-color      : #01e675;
+
+
+$default			: #ddd;
+$primary			: #0a497a;
+$info				: #31a2bc;
+$warning			: #ffdf20;
+$success			: #50ca00;
+$danger				: #ff322c;
+$text_color--new: rgba(0, 0, 0, 0.8);
+
+$selection_bg       : #b3d4fc;
+$selection_color    : $black;
+
+$animate 			: all .35s ease;
+
+$text_color 		: $black70;
+$FFF				: #FFFFFF;
+
+// Break Points
+// ------------------------------------------------------------------------ //
+//Mulai dari iphone keatas
+$small              : "screen and (min-width: 20em)";
+$small_portrait     : "screen and (min-width: 20em) and (orientation: portrait)";
+$small_landscape    : "screen and (min-width: 20em) and (orientation: landscape)";
+
+//Mulai dari phablet ke atas
+$smallmedium              : "screen and (min-width: 520px)";
+$smallmedium_portrait     : "screen and (min-width: 520px) and (orientation: portrait)";
+$smallmedium_landscape    : "screen and (min-width: 520px) and (orientation: landscape)";
+
+//Mobile saja
+$mobile             : "screen and (max-width: 767px)";
+$mobile_portrait    : "screen and (max-width: 767px) and (orientation: portrait)";
+
+//Mulai dari tablet ke atas
+$medium             : "screen and (min-width: 48em)";
+$medium_portrait    : "screen and (min-width: 48em) and (orientation: portrait)";
+$medium_landscape   : "screen and (min-width: 48em) and (orientation: landscape)";
+
+//Mulai dari netbook keatas
+$max-large			: "screen and (max-width: 959px)";
+$large              : "screen and (min-width: 60em)";
+
+//Mulai dari notebook keatas
+$max-wide			: "screen and (max-width: 1199px)";
+$wide 				: "screen and (min-width: 80em)";
+
+//Mulai dari monitor besar(resolusi 1920) ke atas
+$xtrawide 			: "screen and (min-width: 90em)";
+
+$retina             : "only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)";
+
+//breakpoint untuk text responsive
+$breakpoints: (
+  small : 48em,
+  medium: 700px,
+  large : 1024px
+);
+
+// setting default text responsive, typography
+$p-font-sizes: (
+  null  : 12px,
+  small : 12px,
+  medium: 12px,
+  large : 14px
+);
+
+$h4-font-size: (
+  null  : 14px,
+  small : 14px,
+  medium: 14px,
+  large : 16px
+);
+
+$price-carousel-font: (
+  null: 17px,
+  small: 18px,
+  medium: 18px,
+  large: 20px
+);
